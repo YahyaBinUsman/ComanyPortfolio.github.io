@@ -11,6 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
         :root {
             --primary: #00f0ff;
             --primary-dark: #00c4d1;
@@ -130,7 +136,7 @@
 
         /* Sidebar Styles */
         .sidebar {
-            height: 100%;
+            height: 100vh;
             width: 0;
             position: fixed;
             top: 0;
@@ -946,6 +952,53 @@
             height: 3px;
             background: var(--primary);
         }
+        .newsletter-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+  transition: 0.3s ease;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.newsletter-form input[type="email"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--light);
+  padding: 12px 20px;
+  font-size: 1rem;
+  width: 220px;
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-form button {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  border: none;
+  color: var(--light);
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
+}
+
+.newsletter-form button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+}
+
 
         .contact-container {
             display: flex;
@@ -1613,19 +1666,7 @@
                 <p>"Quantum Coders has been instrumental in transforming our business operations. Their innovative solutions and attention to detail are second to none."</p>
                 <p class="testimonial-position">CEO, Twilio</p>
             </div>
-            <div class="testimonial-card">
-                <img src="images/clients/julie sweet.png" alt="Julie Sweet">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3>Julie Sweet</h3>
-                <p>"The team at Quantum Coders is professional, skilled, and dedicated to delivering top-quality results. Their attention to our needs and requirements was exceptional."</p>
-                <p class="testimonial-position">CEO, Accenture</p>
-            </div>
+            
         </div>
     </section>
     
